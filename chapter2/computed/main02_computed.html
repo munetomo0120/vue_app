@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>サンプル</title>
+</head>
+<body>
+  <div id="app">
+    調べたい年: <input type="text" v-model="year"><br>
+    {{ year }}年は{{ isUrudoshi ? 'うるう年です' : 'うるう年ではありません' }}
+  </div>
+  <script src="https://jp.vuejs.org/js/vue.js"></script>
+  <script src="main02_computed.js"></script>
+</body>
+</html>

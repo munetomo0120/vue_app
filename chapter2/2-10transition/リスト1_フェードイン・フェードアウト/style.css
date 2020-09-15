@@ -1,0 +1,15 @@
+/* Enterフェーズ開始前と、Leaveフェーズ終了後のスタイル */
+.v-enter,
+.v-leave-to {
+  opacity: 0;
+}
+/* Enterフェーズ終了時と、Leaveフェーズ開始時のスタイル */
+.v-enter-to,
+.v-leave {
+  opacity: 1;
+}
+/* Enterフェーズ継続中と、Leaveフェーズ継続中のスタイル */
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s;
+}

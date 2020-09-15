@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>サンプル</title>
+</head>
+<body>
+  <div id="app">
+    <div v-show="show">
+      <p>now1: "{{ now1() }}"</p>
+      <p>now2: "{{ now2 }}"</p>
+    </div>
+  </div>
+  <script src="https://jp.vuejs.org/js/vue.js"></script>
+  <script src="main02_computed2.js"></script>
+</body>
+</html>
+<!-- リアクティブデータと依存関係のない算出プロパティ -->
