@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>サンプル</title>
+</head>
+<body>
+  <!-- 条件式が成立する場合だけ要素を表示する。不成立の場合は表示されない -->
+  <div id="app">
+    {{ price }}円 <span v-show="price < 1000">セール実施中！</span>
+  </div>
+  <script src="https://jp.vuejs.org/js/vue.js"></script>
+  <script src="main02_conditional_v-show.js"></script>
+</body>
+</html>

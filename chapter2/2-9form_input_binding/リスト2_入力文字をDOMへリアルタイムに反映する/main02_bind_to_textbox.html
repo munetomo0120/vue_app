@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>サンプル</title>
+</head>
+<body>
+  <div id="app">
+    <!-- 日本語入力の入力文字をDOMへリアルタイムに反映するにはv-bindでデータバインドを行い、v-onでinputイベントをハンドリングする -->
+    <input type="text" v-on:input="yearInputHandler" v-bind:value="year">
+    <p>{{ year }}</p>
+  </div>
+  <script src="https://jp.vuejs.org/js/vue.js"></script>
+  <script src="main02_bind_to_textbox.js"></script>
+</body>
+</html>

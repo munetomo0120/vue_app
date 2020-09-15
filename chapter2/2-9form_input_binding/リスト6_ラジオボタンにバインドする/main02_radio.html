@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>サンプル</title>
+</head>
+<body>
+  <div id="app">
+    <p>当店のサービスはいかがでしたか？: {{ answer }}</p>
+    <label>
+      <input type="radio" v-model="answer" value="素晴らしい">素晴らしい
+    </label>
+    <label>
+      <input type="radio" v-model="answer" value="普通">普通
+    </label>
+    <label>
+      <input type="radio" v-model="answer" value="まだまだ">まだまだ
+    </label>
+  </div>
+  <script src="https://jp.vuejs.org/js/vue.js"></script>
+  <script src="main02_radio.js"></script>
+</body>
+</html>

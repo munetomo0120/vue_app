@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>サンプル</title>
+</head>
+<body>
+  <div id="app">
+    <!-- ↓この記述だとフォームコントロールの内容を更新してもDOMに反映されない -->
+    <!-- <textarea>{{ message }}</textarea> -->
+    
+    <!-- ↓v-modelを使うことで入力内容をコンポーネント側に伝えられる -->
+    <textarea v-model="message"></textarea>
+    <pre>入力内容: {{ message }}</pre>
+  </div>
+  <script src="https://jp.vuejs.org/js/vue.js"></script>
+  <script src="main02_textarea.js"></script>
+</body>
+</html>

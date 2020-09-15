@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>サンプル</title>
+</head>
+<body>
+  <div id="app">
+    <!-- テキストにバインドしたフィルターを適用する -->
+    <!-- フィルターを組み合わせて使用する -->
+     {{ price | unit }} {{ price | number_format | unit }}
+  </div>
+  <script src="https://jp.vuejs.org/js/vue.js"></script>
+  <script src="main02_filter_multiple.js"></script>
+</body>
+</html>
