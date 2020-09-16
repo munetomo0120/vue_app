@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>商品一覧</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<div id="app">
+  <div class="container">
+    <h1 class="pageTitle">商品一覧</h1>
+    <!-- 検索欄 -->
+    <div class="search">
+      <div class="result">
+        検索結果 <span class="count">6件</span>
+      </div>
+      <div class="condition">
+        <div class="target">
+          <label><input type="checkbox">セール対象</label>
+          <label><input type="checkbox">送料無料</label>
+        </div>
+        <div class="sort">
+          <label for="sort">並び替え</label>
+          <select id="sort" class="sorting">
+            <option value="1">標準</option>
+            <option value="2">価格が安い順</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <!-- 商品一覧 -->
+    <div class="list">
+      <!-- ここからの範囲がproductsの配列要素の数だけ繰り返される。v-forディレクティブは繰り返したい要素自身に記述する -->
+      <div class="item" v-for="product in products">
+        <figure class="image">
+
+          <!-- セール対象の場合 -->
+          <template v-if="product.isSale">
+            <div class="status">SALE</div>
+          </template>
+          
+          <img v-bind:src="product.image" alt="">
+          <figcaption v-html="product.name"></figcaption>
+        </figure>
+        <div class="detail">
+          <div class="price"><span>{{ product.price | number_format }}</span>円(税込)</div>
+
+          <!-- 送料無料の場合 -->
+          <template v-if="product.delv === 0">
+            <div class="shipping-fee none">送料無料</div>
+          </template>
+          <!-- 送料ありの場合 -->
+          <template v-else>
+            <div class="shipping-fee none">+送料{{ product.delv | number_format }}円</div>
+          </template>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- vue.jsを読み込む -->
+<script src="https://jp.vuejs.org/js/vue.js"></script>
+<!-- jsファイルはbody閉じタグの前に -->
+<script src="main.js"></script>
+</body>
+</html>
