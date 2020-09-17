@@ -151,7 +151,7 @@ function taxedOptPrice() {
   }
   optPrice += opt4.value * 500;
   // オプション料金（税込）を返す
-  retuen incTax(optPrice);
+  return incTax(optPrice);
 }
 // 金額の表示を更新する関数
 function updateForm() {
